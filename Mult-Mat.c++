@@ -23,6 +23,19 @@ void display(int *Matrix){
     }
 }
 
+//Multiplicación CPU
+void mult(int *A, int *B,int *C){
+	int aux = 0;
+	for(int i=0; i<H; i++){
+		for(int j=0; j<W; j++){
+			aux = 0;
+			for(int k=0; k<H; k++)
+			    aux += A[i*W+k]* B[k*W+j];
+			C[i*W+j] = aux;
+		}
+	}
+}
+
 int main(){
 
 	return 0;
