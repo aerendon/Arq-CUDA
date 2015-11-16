@@ -1,6 +1,6 @@
-ï»¿# Intro ProgramaciÃ³n en Paralelo - CUDA
+# Intro Programación en Paralelo - CUDA
 Arquitectura de Computadores 
-- Ing. Sistemas y ComputaciÃ³n 
-- Universidad TecnolÃ³gica de Pereira
+Ing. Sistemas y Computación 
+Universidad Tecnológica de Pereira
 
 * Suma de Vectores

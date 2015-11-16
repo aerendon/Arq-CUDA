@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 #include <cuda.h>
 //Height and Weight (Tamaño de la Matriz)
-#define HEIGHT 1000
-#define WEIGHT 1000
+#define HEIGHT 10
+#define WEIGHT 10
 
 using namespace std;
 
@@ -17,7 +17,7 @@ void fill(int *Matrix){
 void display(int *Matrix){
     for(int i=0; i<HEIGHT; i++){
         for(int j=0; j<WEIGHT; j++){
-            cout<<v[i*WEIGHT+j]<<" ";
+            cout<<Matrix[i*WEIGHT+j]<<" ";
         }
         cout<<endl;
     }
@@ -26,17 +26,28 @@ void display(int *Matrix){
 //Multiplicación CPU
 void mult(int *A, int *B,int *C){
 	int aux = 0;
-	for(int i=0; i<H; i++){
-		for(int j=0; j<W; j++){
+	for(int i=0; i<HEIGHT; i++){
+		for(int j=0; j<WEIGHT; j++){
 			aux = 0;
-			for(int k=0; k<H; k++)
-			    aux += A[i*W+k]* B[k*W+j];
-			C[i*W+j] = aux;
+			for(int k=0; k<HEIGHT; k++)
+			    aux += A[i*WEIGHT+k]* B[k*WEIGHT+j];
+			C[i*WEIGHT+j] = aux;
 		}
 	}
 }
 
 int main(){
+	int *A = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
+	int *B = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
+	int *C = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
+	int *D = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
+
+	fill(A);
+	fill(B);
+
+	display(A);
+	display(B);
+	display(C);
 
 	return 0;
 }
