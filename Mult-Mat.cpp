@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 #include <cuda.h>
 //Height and Weight (Tamaño de la Matriz)
-#define HEIGHT 10
-#define WEIGHT 10
+#define HEIGHT 5
+#define WEIGHT 5
 
 using namespace std;
 
@@ -21,6 +21,7 @@ void display(int *Matrix){
         }
         cout<<endl;
     }
+    cout<<endl;
 }
 
 //Multiplicación CPU
@@ -42,9 +43,13 @@ int main(){
 	int *C = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
 	int *D = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
 
+	//Creacion de las matrices
 	fill(A);
 	fill(B);
 
+	mult(A, B, C); //CPU
+
+	//Muestra el contenido de las matrices
 	display(A);
 	display(B);
 	display(C);
