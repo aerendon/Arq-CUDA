@@ -1,6 +1,7 @@
-# Intro Programaci髇 en Paralelo - CUDA
+# Intro Programaci贸n en Paralelo - CUDA
 Arquitectura de Computadores 
-Ing. Sistemas y Computaci髇 
-Universidad Tecnol骻ica de Pereira
+Ing. Sistemas y Computaci贸n 
+Universidad Tecnol贸gica de Pereira
 
 * Suma de Vectores
+* Multiplicaci贸n de Matrices
