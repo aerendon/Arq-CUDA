@@ -37,6 +37,19 @@ void mult(int *A, int *B,int *C){
 	}
 }
 
+//Multiplicación GPU
+__global__ void multMat(int *d_X, int *d_Y,int *d_Z){
+	int i = blockIdx.y*blockDim.y+threadIdx.y;
+	int j = blockIdx.x*blockDim.x+threadIdx.x;
+	if(i < HEIGHT && j < WEIGHT){
+		int value = 0;
+		for(int k=0; k<HEIGHT; k++){
+			value += d_X[i*WEIGHT+k] * d_Y[k*WEIGHT+j];
+		}
+		d_Z[i*WEIGHT+j] = value;
+	}
+}
+
 int main(){
 	int *A = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
 	int *B = (int*)malloc(HEIGHT*WEIGHT*sizeof(int));
