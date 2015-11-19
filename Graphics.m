@@ -7,7 +7,7 @@ pie3(x,[1 1 0 0 0 0]) %3D
 %Barras
 y = [10 2 3 5 18 20 15 ];
 
-subplot(2,2,1),bar(x),title('Barras Verticales')
-subplot(2,2,2),barh(x),title('Barras Horizontales')
-subplot(2,2,3),bar3(x),title('Barras Verticales 3D')
-subplot(2,2,4),bar3h(x),title('Barras Horizontales 3D')
+subplot(3,3,1),bar(y),title('Barras Verticales')
+subplot(3,3,2),barh(y),title('Barras Horizontales')
+subplot(3,3,3),bar3(y),title('Barras Verticales 3D')
+subplot(3,3,4),bar3h(y),title('Barras Horizontales 3D')
