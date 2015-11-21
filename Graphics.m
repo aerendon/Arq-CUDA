@@ -1,13 +1,30 @@
-x = [183 125 15 8 7 12]
+% x = [183 125 15 8 7 12]
+% 
+% %Circular
+% pie(x),legend('PP', 'PSOE','CiU','IU','PNV','Otros') %2D
+% pie3(x,[1 1 0 0 0 0]) %3D
+% 
+% %Barras
+% y = [10 2 3 5 18 20 15 ];
+% 
+% subplot(3,3,1),bar(y),title('Barras Verticales')
+% subplot(3,3,2),barh(y),title('Barras Horizontales')
+% subplot(3,3,3),bar3(y),title('Barras Verticales 3D')
+% subplot(3,3,4),bar3h(y),title('Barras Horizontales 3D')
 
-%Circular
-pie(x),legend('PP', 'PSOE','CiU','IU','PNV','Otros') %2D
-pie3(x,[1 1 0 0 0 0]) %3D
+%N = 10
+a = [0.000004 0.000062; 0.000006 0.000061; 0.000005 0.000063; 0.000009 0.000063];
+a = mean(a);
+%N = 100
+b = [0.003024 0.000134; 0.003671 0.000127; 0.003433 0.000128; 0.003813 0.000126];
+b = mean(b);
+%N = 500
+c = [0.367524 0.003069; 0.362220 0.003071; 0.363154 0.003072; 0.365044 0.003065];
+c = mean(c);
+%N = 1000
+d = [2.921176 0.019922; 3.184122 0.019958; 3.090197 0.020026; 2.916863 0.019956];
+d = mean(d);
+%N = 1500
+e = [14.698782 0.065490; 14.342276 0.065575; 14.757960 0.065537; 15.048220 0.065630];
+e = mean(e);
 
-%Barras
-y = [10 2 3 5 18 20 15 ];
-
-subplot(3,3,1),bar(y),title('Barras Verticales')
-subplot(3,3,2),barh(y),title('Barras Horizontales')
-subplot(3,3,3),bar3(y),title('Barras Verticales 3D')
-subplot(3,3,4),bar3h(y),title('Barras Horizontales 3D')
