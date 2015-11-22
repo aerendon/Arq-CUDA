@@ -1,17 +1,3 @@
-% x = [183 125 15 8 7 12]
-% 
-% %Circular
-% pie(x),legend('PP', 'PSOE','CiU','IU','PNV','Otros') %2D
-% pie3(x,[1 1 0 0 0 0]) %3D
-% 
-% %Barras
-% y = [10 2 3 5 18 20 15 ];
-% 
-% subplot(3,3,1),bar(y),title('Barras Verticales')
-% subplot(3,3,2),barh(y),title('Barras Horizontales')
-% subplot(3,3,3),bar3(y),title('Barras Verticales 3D')
-% subplot(3,3,4),bar3h(y),title('Barras Horizontales 3D')
-
 N = [10 50 100 500 800 1000 1500]; 
 CPU = [0.000004 0.000339 0.003024 0.367524 2.199383 2.921176 14.698782; 0.000006 0.000490 0.003671 0.362220 2.199110 3.184122 14.342276; 0.000005 0.000828 0.003433 0.363154 1.455170 3.090197 14.757960; 0.000009 0.000827 0.003813 0.365044 2.193791 2.916863 15.048220];
 CPU = mean(CPU);
